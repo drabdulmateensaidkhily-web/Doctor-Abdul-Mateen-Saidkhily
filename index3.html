@@ -1,0 +1,429 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<style> 
+body {
+
+            margin: 0;
+
+            padding: 0;
+
+            min-height: 100vh;
+
+            font-family: Tahoma, Arial, sans-serif;
+
+            background-image:
+
+                linear-gradient(
+
+                    rgba(0, 30, 50, 0.45),
+
+                    rgba(0, 30, 50, 0.45)
+
+                ),
+
+                url("photo.photo");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+
+            background-attachment: fixed;
+
+        }
+
+
+.doctor-header {
+
+            width: 100%;
+
+            text-align: center;
+
+            padding: 50px 20px 25px;
+
+        }
+
+        .doctor-header h1 {
+
+            margin: 0 0 10px;
+
+            font-size: 40px;
+
+            font-weight: bold;
+
+            line-height: 1.6;
+
+            color: #ffffff;
+
+            text-shadow:
+
+                0 2px 5px rgba(0, 0, 0, 0.6);
+
+        }
+
+        .doctor-header h2 {
+
+            margin: 0;
+
+            font-size: 23px;
+
+            font-weight: normal;
+
+            line-height: 1.7;
+
+            color: #ffffff;
+
+            text-shadow:
+
+                0 2px 5px rgba(0, 0, 0, 0.6);
+
+        }
+       
+ 
+.cards {
+
+            width: 100%;
+
+            max-width: 800px;
+            margin:0 auto;
+            padding: 15px 20px 25px;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 15px;
+           
+        }
+
+ .card {
+
+            
+            width:50%
+
+            max-width: 400px;
+
+            padding: 20px 18px;
+
+            background: rgba(255, 255, 255, 0.20);
+
+            border: 1px solid rgba(255, 255, 255, 0.45);
+
+            border-radius: 18px;
+
+            box-shadow:
+
+                0 7px 20px rgba(0, 0, 0, 0.18);
+
+            backdrop-filter: blur(8px);
+
+            -webkit-backdrop-filter: blur(8px);
+
+        }
+
+
+     .card h3 {
+
+            margin: 0 0 16px;
+
+            text-align: center;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            color: #ffffff;
+
+            text-shadow:
+
+                0 2px 5px rgba(0, 0, 0, 0.6);
+
+        }
+
+
+
+  .link {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            width: 90%;
+
+            min-height: 42px;
+
+            margin: 9px auto;
+
+            padding: 8px 12px;
+
+            border-radius: 30px;
+
+            border: 1px solid rgba(255, 255, 255, 0.60);
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            color: #ffffff;
+
+            text-shadow:
+
+                0 2px 4px rgba(0, 0, 0, 0.5);
+
+            backdrop-filter: blur(5px);
+
+            -webkit-backdrop-filter: blur(5px);
+
+            transition: 0.25s ease;
+
+        }
+    .location-button {
+    display: inline-block;
+
+    margin: 0 auto 12px;
+
+    padding: 9px 18px;
+
+    border-radius: 25px;
+
+    background: rgba(30, 130, 220, 0.55);
+
+    border: 1px solid rgba(255, 255, 255, 0.60);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    backdrop-filter: blur(5px);
+
+    -webkit-backdrop-filter: blur(5px);
+}
+
+ .card .link:nth-of-type(1) {
+
+            background: rgba(30, 130, 220, 0.55);
+
+        }
+
+.card .link:nth-of-type(2) {
+
+            background: rgba(40, 170, 100, 0.55);
+
+        }
+.card .link:nth-of-type(3) {
+
+            background: rgba(150, 80, 180, 0.55);
+
+        }
+    .link:hover{
+                transform: translatey(-20px);
+                box-shadow: 0 5px 15px rgba(0,0,0, 0.25);
+    }
+
+.link img {
+
+            width: 20px;
+
+            height: 20px;
+
+            object-fit: contain;
+
+        }
+     .address {
+
+            width: 100%;
+
+            margin-top: 10px;
+
+            padding: 25px 20px 30px;
+
+            text-align: center;
+
+            background: rgba(0, 0, 0, 0.20);
+
+            border-top:
+
+                1px solid rgba(255, 255, 255, 0.30);
+
+        }
+
+        .address span {
+
+            display: block;
+
+            margin-bottom: 5px;
+
+            font-size: 19px;
+
+            font-weight: bold;
+
+            color: #ffffff;
+
+            text-shadow:
+
+                0 2px 4px rgba(0, 0, 0, 0.6);
+
+        }
+
+        .address p {
+
+            margin: 0;
+
+            font-size: 17px;
+
+            line-height: 2;
+
+            color: #ffffff;
+
+            text-shadow:
+
+                0 2px 4px rgba(0, 0, 0, 0.6);
+
+        }
+
+
+
+
+@media (max-width: 700px) {
+
+            body {
+
+                background-attachment: scroll;
+
+            }
+
+            .doctor-header {
+
+                padding: 40px 15px 25px;
+
+            }
+
+            .doctor-header h1 {
+
+                font-size: 30px;
+
+            }
+
+            .doctor-header h2 {
+
+                font-size: 19px;
+
+            }
+
+            .cards {
+
+                flex-direction: column;
+
+                align-items: center;
+
+                padding: 10px 15px 20px;
+                gap: 15px;
+
+            }
+
+            .card {
+
+                width: 100%;
+
+                max-width: 400px;
+
+            }
+       .link { 
+                font-size : 16px;
+
+            
+
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+  <div class="doctor-header">
+
+<h1>  دوکتور عبدالمتين سيدخيلي</h1>
+<h2> متخصص امراض عقلي و عصبي </h2>
+</div>
+
+     <div class ="cards" >
+
+<div class ="card" > 
+
+         <h3> براي مشاوره و تعيين وقت</h3>
+
+                <a href="tel:YOUR-NUMBER" class="link">
+
+                    <img src="phone.svg" alt="تلفن" > <span>  شماره تماس </span>  </a>
+
+                <a href="https://wa.me/YOUR-NUMBER" class="link">
+
+                    <img src="whatsapp.svg" alt="واتسپ"> <span> واتساپ </span>  </a>
+
+</div>
+
+<div class="card">
+
+                 <h3>ارتباط با داکتر عبدالمتين سيدخيلي</h3>
+
+                <a href="tel:+93780340346" class="link">
+
+                    <img src="phone.svg" alt="تلفن" > <span>  شماره تماس </span>  </a>
+
+                <a href="https://wa.me/93798885144" class="link">
+
+                    <img src="whatsapp.svg" alt="واتسپ"> <span> واتساپ </span> </a>
+
+                <a href="mailto:YOUR-EMAIL" class="link">
+
+                    <img src="email.svg" alt="ايميل ادرس" > <span> ايميل ادرس </span>  </a>
+ 
+ </div> 
+     </div>
+
+<div class="address">
+
+        <div class="location-row">
+
+    <span class="click-text">کليک:</span>
+
+    <a href="https://maps.app.goo.gl/3oRorsJ9VG72MfkE9?g_st=ic"
+       class="location-button"
+       target="_blank">
+
+        <img src="location.svg.svg" alt="لوکيشن">
+
+        <span>لوکيشن معاينه‌خانه</span>
+
+    </a>
+
+</div>
+
+
+    
+      <span> آدرس :</span>
+      <p>            ??آدرس: خيرخانه، چهاراهي قلعه نجارا، جوار ورکشاپ وزارت صحت عامه (ديپوي دولتي)  </p>  
+
+         </div>
+     
+
+
+</body>
+</html>
